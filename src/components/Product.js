@@ -42,6 +42,9 @@ else if(weight===""){
 else  if(isNaN(weight)){
      return new Error(`The 'weight' prop should be a number`);
    }
+   else{
+     return null;
+   }
 
 
 
