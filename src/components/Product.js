@@ -36,7 +36,7 @@ function range(props, propName) {
   let weight = props[propName];
 
  if (!(weight >=80 && weight <= 300)) {
-      return new Error( `The 'weight'prop is required`);
+      return new Error( `The 'weight'prop should range between 80 and 300`);
   }
 
   if(weight===""){
