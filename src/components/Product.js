@@ -42,7 +42,7 @@ function range(props, propName) {
     return new Error(`The 'weight'prop is required`);
   }
 
-  
+
 
 
 
