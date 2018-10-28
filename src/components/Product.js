@@ -34,13 +34,13 @@ function range(props, propName) {
   if(weight===""){
      return new Error(`The 'weight'prop is required`);
    }
-  if(isNaN(weight)){
-     return new Error(`The 'weight' prop should be a number`);
-   }
+  
  if (!(weight >=80 && weight <= 300)) {
       return new Error( `The 'weight'prop should range between 80 and 300`);
   }
-
+  if(isNaN(weight)){
+     return new Error(`The 'weight' prop should be a number`);
+   }
 
 
 
