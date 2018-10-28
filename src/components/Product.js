@@ -30,9 +30,6 @@ Product.propTypes = {
   weight:range
 };
 function range(props, propName) {
-
-
-
   let weight = props[propName];
   if(isNaN(weight)){
      return new Error(`'weight' prop should be a number`);
