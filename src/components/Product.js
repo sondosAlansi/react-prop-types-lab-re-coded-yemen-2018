@@ -31,15 +31,15 @@ Product.propTypes = {
 };
 function range(props, propName) {
   let weight = props[propName];
-  if(weight===""){
+  /*if(weight===""){
      return new Error(`The 'weight'prop is required`);
-   }
+   }*/
   if(isNaN(weight)){
      return new Error(`The 'weight' prop is not a number.`);
    }
- if (!(weight >=80 && weight <= 300)) {
+ /*if (!(weight >=80 && weight <= 300)) {
       return new Error( `The 'weight'prop should range between 80 and 300`);
-  }
+  }*/
 
 
 
