@@ -27,16 +27,26 @@ Product.propTypes = {
    hasWatermark:PropTypes.bool,
   color:PropTypes.oneOf(['white', 'eggshell-white','salmon']).isRequired,
 
-  weight:function range(props, propName, componentName) {
-
-
-  if (props[propName]) {
-    let weight = props[propName];
-    if (typeof weight === 'number') {
-        return (weight >= 80 && weight <= 300) ? null : new Error(propName + ' in ' + componentName + " is not within 80 to 300");
-    }
-  }
-
-  return null;
-}.isRequired
+  weight:range
 };
+function range(props, propName) {
+
+
+
+  let weight = props[propName];
+
+ if (!(weight >=80 && weight <= 300)) {
+      return new Error( "the weight is not within 80 to 300");
+  }
+ 
+  if(weight===""){
+    return new Error(`The 'weight'prop is required`);
+  }
+  if(isNaN(weight)){
+     return new Error(`The 'weight'prop is not number`);
+   }
+
+
+
+
+}
